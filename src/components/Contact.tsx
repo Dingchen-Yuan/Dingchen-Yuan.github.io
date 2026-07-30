@@ -3,53 +3,57 @@ import { PROFILE } from '../data/site'
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-sand/10 bg-ink-soft/40">
+    <section id="contact" className="border-t border-line bg-panel">
       <div className="section-pad">
-        <p className="mb-3 text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-          Contact
-        </p>
-        <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-sand sm:text-4xl">
-          Let’s talk
-        </h2>
-        <p className="mt-5 max-w-xl text-base text-sand-dim sm:text-lg">
-          Open to internships, junior full-stack roles, and interesting collaborative projects in
-          Auckland / New Zealand.
+        <p className="eyebrow">Contact</p>
+        <h2 className="section-title">Happy to connect</h2>
+        <p className="mt-4 max-w-xl text-base text-muted sm:text-lg">
+          Open to internships and junior full-stack / backend roles in Auckland and across New
+          Zealand.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <a
             href={`mailto:${PROFILE.email}`}
-            className="rounded-2xl border border-sand/15 bg-ink/50 p-5 transition hover:border-copper/45"
+            className="rounded-xl border border-line bg-canvas p-5 transition hover:border-accent/40"
           >
-            <Mail className="size-5 text-copper" />
-            <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">Email</p>
-            <p className="mt-1 break-all text-sm text-sand">{PROFILE.email}</p>
+            <Mail className="size-5 text-accent" />
+            <p className="mt-4 text-[11px] font-semibold tracking-wide text-muted uppercase">
+              Email
+            </p>
+            <p className="mt-1 break-all text-sm font-medium text-ink">{PROFILE.email}</p>
           </a>
           <a
             href={PROFILE.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl border border-sand/15 bg-ink/50 p-5 transition hover:border-copper/45"
+            className="rounded-xl border border-line bg-canvas p-5 transition hover:border-accent/40"
           >
-            <BriefcaseBusiness className="size-5 text-copper" />
-            <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">LinkedIn</p>
-            <p className="mt-1 text-sm text-sand">dingchen-yuan</p>
+            <BriefcaseBusiness className="size-5 text-accent" />
+            <p className="mt-4 text-[11px] font-semibold tracking-wide text-muted uppercase">
+              LinkedIn
+            </p>
+            <p className="mt-1 text-sm font-medium text-ink">dingchen-yuan</p>
           </a>
           <a
             href={PROFILE.github}
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl border border-sand/15 bg-ink/50 p-5 transition hover:border-copper/45"
+            className="rounded-xl border border-line bg-canvas p-5 transition hover:border-accent/40"
           >
-            <Code2 className="size-5 text-copper" />
-            <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">GitHub</p>
-            <p className="mt-1 text-sm text-sand">@Dingchen-Yuan</p>
+            <Code2 className="size-5 text-accent" />
+            <p className="mt-4 text-[11px] font-semibold tracking-wide text-muted uppercase">
+              GitHub
+            </p>
+            <p className="mt-1 text-sm font-medium text-ink">@Dingchen-Yuan</p>
           </a>
-          <div className="rounded-2xl border border-sand/15 bg-ink/50 p-5">
-            <MapPin className="size-5 text-copper" />
-            <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">Location</p>
-            <p className="mt-1 text-sm text-sand">{PROFILE.location}</p>
-            <p className="mt-2 text-xs text-sand-dim">{PROFILE.phone}</p>
+          <div className="rounded-xl border border-line bg-canvas p-5">
+            <MapPin className="size-5 text-accent" />
+            <p className="mt-4 text-[11px] font-semibold tracking-wide text-muted uppercase">
+              Location
+            </p>
+            <p className="mt-1 text-sm font-medium text-ink">{PROFILE.location}</p>
+            <p className="mt-2 text-xs text-muted">{PROFILE.phone}</p>
           </div>
         </div>
       </div>

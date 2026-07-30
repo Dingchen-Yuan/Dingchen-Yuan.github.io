@@ -3,47 +3,43 @@ import { PROJECTS } from '../data/site'
 
 export function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className="border-t border-line">
       <div className="section-pad">
-        <p className="mb-3 text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-          Projects
-        </p>
-        <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-sand sm:text-4xl">
-          Selected work
-        </h2>
-        <ul className="mt-12 space-y-6">
+        <p className="eyebrow">Projects</p>
+        <h2 className="section-title">Selected coursework & portfolio work</h2>
+        <ul className="mt-10 space-y-4">
           {PROJECTS.map((project) => (
             <li
               key={project.name}
-              className="group rounded-2xl border border-sand/15 bg-gradient-to-br from-ink-soft to-ink p-6 transition hover:border-copper/40 sm:p-8"
+              className="rounded-xl border border-line bg-panel p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition hover:border-brand/25 sm:p-7"
             >
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <p className="text-xs tracking-[0.18em] text-sand-dim uppercase">
+                  <p className="inline-flex rounded-md bg-accent-soft px-2 py-0.5 text-[11px] font-semibold tracking-wide text-accent uppercase">
                     {project.status}
                   </p>
-                  <h3 className="font-display mt-2 text-2xl font-bold text-sand">
+                  <h3 className="font-display mt-2 text-2xl font-semibold text-brand">
                     {project.name}
                   </h3>
-                  <p className="mt-1 text-sm text-copper">{project.role}</p>
+                  <p className="mt-1 text-sm font-medium text-muted">{project.role}</p>
                 </div>
                 <a
                   href={project.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-sand/20 px-3 py-1.5 text-xs font-medium text-sand transition group-hover:border-copper/50 hover:bg-sand/5"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-brand transition hover:bg-chip"
                 >
                   GitHub <ExternalLink className="size-3.5" />
                 </a>
               </div>
-              <p className="mt-5 max-w-3xl text-sm leading-relaxed text-sand-dim sm:text-base">
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
                 {project.description}
               </p>
-              <ul className="mt-6 flex flex-wrap gap-2">
+              <ul className="mt-5 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-full bg-sand/8 px-3 py-1 text-xs text-sand-dim"
+                    className="rounded-md bg-chip px-2.5 py-1 text-xs font-medium text-muted"
                   >
                     {tech}
                   </li>

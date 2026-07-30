@@ -31,7 +31,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="grain relative min-h-dvh">
+    <div className="relative min-h-dvh bg-canvas">
       <Nav active={active} />
       <main>
         <Home />
@@ -41,9 +41,11 @@ export default function App() {
         <Resume />
         <Contact />
       </main>
-      <footer className="border-t border-sand/10 px-5 py-8 text-center text-xs text-sand-dim">
-        © {new Date().getFullYear()} Dingchen Yuan · Built with React & Tailwind · Hosted on
-        GitHub Pages
+      <footer className="border-t border-line bg-panel px-5 py-7 text-center text-xs text-muted">
+        © {new Date().getFullYear()} Dingchen Yuan · Available for internships & junior roles ·{' '}
+        <a href="https://dingchen-yuan.github.io" className="text-brand underline-offset-2 hover:underline">
+          dingchen-yuan.github.io
+        </a>
       </footer>
     </div>
   )

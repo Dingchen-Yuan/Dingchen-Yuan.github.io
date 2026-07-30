@@ -1,85 +1,89 @@
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
 import { PROFILE } from '../data/site'
 
 export function Home() {
   return (
     <section
       id="home"
-      className="relative flex min-h-dvh items-end overflow-hidden pb-16 pt-28 sm:items-center sm:pb-0"
+      className="relative flex min-h-[88dvh] items-center overflow-hidden pt-24 pb-16"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 15% 20%, rgba(196,92,38,0.28), transparent 55%), radial-gradient(ellipse 70% 50% at 85% 70%, rgba(61,90,69,0.35), transparent 50%), linear-gradient(165deg, #0c0f0e 0%, #121816 45%, #0c0f0e 100%)',
+            'radial-gradient(ellipse 70% 55% at 0% 0%, rgba(15,118,110,0.10), transparent 55%), radial-gradient(ellipse 55% 45% at 100% 10%, rgba(22,58,95,0.10), transparent 50%), linear-gradient(180deg, #eef3f8 0%, #f3f6fa 55%, #f3f6fa 100%)',
         }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-24 h-[420px] w-[420px] rounded-full border border-sand/10"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-8 top-40 h-[280px] w-[280px] rounded-full border border-copper/25"
       />
 
       <div className="section-pad relative z-10 !py-0">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4 text-sm font-medium tracking-[0.22em] text-copper uppercase"
+          transition={{ duration: 0.4 }}
+          className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1 text-xs font-medium text-muted"
         >
-          {PROFILE.location}
+          <span className="size-1.5 rounded-full bg-accent" />
+          Open to work · {PROFILE.location}
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.04 }}
+          className="text-sm font-medium text-accent"
+        >
+          {PROFILE.school}
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.05 }}
-          className="font-display max-w-4xl text-5xl leading-[0.95] font-extrabold tracking-tight text-sand sm:text-6xl md:text-7xl"
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="font-display mt-3 max-w-3xl text-4xl leading-[1.1] font-semibold tracking-tight text-brand sm:text-5xl md:text-6xl"
         >
-          Dingchen
-          <span className="text-copper"> Yuan</span>
+          {PROFILE.name}
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.12 }}
-          className="mt-5 max-w-xl text-lg text-sand-dim sm:text-xl"
+          transition={{ duration: 0.5, delay: 0.14 }}
+          className="mt-2 text-lg font-medium text-ink sm:text-xl"
         >
-          {PROFILE.title}. {PROFILE.tagline}
+          {PROFILE.title}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.18 }}
+          className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+        >
+          {PROFILE.tagline}
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.2 }}
-          className="mt-10 flex flex-wrap gap-3"
+          transition={{ duration: 0.5, delay: 0.24 }}
+          className="mt-9 flex flex-wrap gap-3"
         >
-          <a
-            href="#projects"
-            className="inline-flex items-center justify-center rounded-full bg-sand px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-sand-dim"
-          >
+          <a href="#projects" className="btn-primary">
             View projects
           </a>
-          <a
-            href="#resume"
-            className="inline-flex items-center justify-center rounded-full border border-sand/25 px-5 py-2.5 text-sm font-semibold text-sand transition hover:border-sand/50"
-          >
+          <a href="#resume" className="btn-secondary">
             Resume
           </a>
+          <a
+            href={PROFILE.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-secondary"
+          >
+            LinkedIn
+          </a>
         </motion.div>
-
-        <a
-          href="#about"
-          className="mt-16 inline-flex items-center gap-2 text-xs tracking-[0.2em] text-sand-dim uppercase transition hover:text-sand"
-        >
-          Scroll <ArrowDown className="size-3.5" />
-        </a>
       </div>
     </section>
   )

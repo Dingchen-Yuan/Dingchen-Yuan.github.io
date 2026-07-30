@@ -2,26 +2,21 @@ import { STACK } from '../data/site'
 
 export function TechStack() {
   return (
-    <section id="stack" className="border-t border-sand/10 bg-ink-soft/40">
+    <section id="stack" className="border-t border-line bg-panel">
       <div className="section-pad">
-        <p className="mb-3 text-xs font-semibold tracking-[0.24em] text-copper uppercase">
-          Tech Stack
-        </p>
-        <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-sand sm:text-4xl">
-          Tools I reach for
-        </h2>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <p className="eyebrow">Tech Stack</p>
+        <h2 className="section-title">Skills for junior full-stack roles</h2>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STACK.map((group) => (
-            <div
-              key={group.group}
-              className="rounded-2xl border border-sand/15 bg-ink/50 p-6"
-            >
-              <h3 className="font-display text-lg font-bold text-sand">{group.group}</h3>
-              <ul className="mt-5 space-y-2.5">
+            <div key={group.group} className="rounded-xl border border-line bg-canvas p-5">
+              <h3 className="text-sm font-semibold tracking-wide text-brand uppercase">
+                {group.group}
+              </h3>
+              <ul className="mt-4 space-y-2">
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="border-b border-sand/8 pb-2 text-sm text-sand-dim last:border-0"
+                    className="border-b border-line/70 pb-2 text-sm text-muted last:border-0 last:pb-0"
                   >
                     {item}
                   </li>
