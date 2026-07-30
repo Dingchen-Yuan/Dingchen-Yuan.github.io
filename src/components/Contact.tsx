@@ -1,4 +1,4 @@
-import { Code2, Mail, MapPin } from 'lucide-react'
+import { BriefcaseBusiness, Code2, Mail, MapPin } from 'lucide-react'
 import { PROFILE } from '../data/site'
 
 export function Contact() {
@@ -12,10 +12,11 @@ export function Contact() {
           Let’s talk
         </h2>
         <p className="mt-5 max-w-xl text-base text-sand-dim sm:text-lg">
-          Open to internships, junior full-stack roles, and interesting collaborative projects.
+          Open to internships, junior full-stack roles, and interesting collaborative projects in
+          Auckland / New Zealand.
         </p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <a
             href={`mailto:${PROFILE.email}`}
             className="rounded-2xl border border-sand/15 bg-ink/50 p-5 transition hover:border-copper/45"
@@ -23,6 +24,16 @@ export function Contact() {
             <Mail className="size-5 text-copper" />
             <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">Email</p>
             <p className="mt-1 break-all text-sm text-sand">{PROFILE.email}</p>
+          </a>
+          <a
+            href={PROFILE.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-2xl border border-sand/15 bg-ink/50 p-5 transition hover:border-copper/45"
+          >
+            <BriefcaseBusiness className="size-5 text-copper" />
+            <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">LinkedIn</p>
+            <p className="mt-1 text-sm text-sand">dingchen-yuan</p>
           </a>
           <a
             href={PROFILE.github}
@@ -38,6 +49,7 @@ export function Contact() {
             <MapPin className="size-5 text-copper" />
             <p className="mt-4 text-xs tracking-[0.16em] text-sand-dim uppercase">Location</p>
             <p className="mt-1 text-sm text-sand">{PROFILE.location}</p>
+            <p className="mt-2 text-xs text-sand-dim">{PROFILE.phone}</p>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export function TechStack() {
         <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-sand sm:text-4xl">
           Tools I reach for
         </h2>
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {STACK.map((group) => (
             <div
               key={group.group}

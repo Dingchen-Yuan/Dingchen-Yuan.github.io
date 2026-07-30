@@ -31,18 +31,26 @@ export function Resume() {
             Download PDF
           </a>
           <a
-            href="https://github.com/Dingchen-Yuan"
+            href={RESUME.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-sand/25 px-5 py-2.5 text-sm font-semibold text-sand transition hover:border-sand/50"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={RESUME.github}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-sand/25 px-5 py-2.5 text-sm font-semibold text-sand transition hover:border-sand/50"
           >
             <FileText className="size-4" />
-            GitHub profile
+            GitHub
           </a>
         </div>
         <p className="mt-4 text-xs text-sand-dim/80">
-          Tip: add your file at <code className="text-sand">public/resume.pdf</code> so the
-          download link works after the next deploy.
+          Tip: add your CV PDF at <code className="text-sand">public/resume.pdf</code> on the{' '}
+          <code className="text-sand">source</code> branch, then redeploy.
         </p>
       </div>
     </section>
