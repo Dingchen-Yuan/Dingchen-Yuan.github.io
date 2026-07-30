@@ -1,35 +1,44 @@
 # Dingchen Yuan — Portfolio
 
-Personal site for [Dingchen-Yuan](https://github.com/Dingchen-Yuan).
-
 **Live:** https://dingchen-yuan.github.io
 
-## Stack
+React + TypeScript + Vite + Tailwind portfolio, published with GitHub Pages.
 
-- React + TypeScript + Vite
-- Tailwind CSS v4
-- Framer Motion
-- GitHub Pages (`main` / root via Actions build of static assets)
+## Branches
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Built static site only (Pages source: `/` root) |
+| `source` | Full React project source (edit here) |
 
 ## Local development
 
 ```bash
+git checkout source
 npm install
 npm run dev
 ```
 
-## Deploy
-
-Push to `main`. GitHub Actions builds the site and publishes to GitHub Pages.
+## Deploy to Pages
 
 ```bash
+git checkout source
+npm install
 npm run build
+# publish dist/ to main (root)
+rm -rf /tmp/dy-pages-clean && mkdir /tmp/dy-pages-clean && cp -R dist/. /tmp/dy-pages-clean/
+cd /tmp/dy-pages-clean
+git init -b main
+git add -A
+git commit -m "deploy: update site"
+git remote add origin https://github.com/Dingchen-Yuan/Dingchen-Yuan.github.io.git
+git push -f origin main
 ```
 
 ## Custom domain
 
-After DNS is ready, add a `CNAME` file in `public/` (e.g. `www.yourdomain.com`) and set the custom domain under **Settings → Pages**.
+In repo **Settings → Pages → Custom domain**, add your domain and create DNS records (A/CNAME). Optionally add `public/CNAME` on `source`, rebuild, and redeploy.
 
 ## Resume PDF
 
-Place your PDF at `public/resume.pdf`, then commit and push.
+Add `public/resume.pdf` on the `source` branch, rebuild, and redeploy.
