@@ -21,7 +21,11 @@ export function Resume() {
         </ul>
 
         <div className="mt-9 flex flex-wrap gap-3">
-          <a href={RESUME.pdfHref} className="btn-primary">
+          <a
+            href={RESUME.pdfHref}
+            download="Dingchen-Barry-Yuan-CV.pdf"
+            className="btn-primary"
+          >
             <Download className="mr-2 size-4" />
             Download PDF
           </a>
@@ -33,10 +37,6 @@ export function Resume() {
             GitHub
           </a>
         </div>
-        <p className="mt-4 text-xs text-muted">
-          Add your CV at <code className="text-ink">public/resume.pdf</code> on the{' '}
-          <code className="text-ink">source</code> branch, then redeploy.
-        </p>
       </div>
     </section>
   )
