@@ -1,4 +1,4 @@
-import { NAV } from '../data/site'
+import { NAV, PROFILE } from '../data/site'
 
 type Props = {
   active: string
@@ -8,8 +8,11 @@ export function Nav({ active }: Props) {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-line/80 bg-panel/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#home" className="font-display text-base font-semibold text-brand">
-          Dingchen Yuan
+        <a
+          href="#home"
+          className="font-display max-w-[46%] truncate text-sm font-semibold tracking-wide text-brand sm:max-w-none sm:text-base"
+        >
+          {PROFILE.name}
         </a>
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => (

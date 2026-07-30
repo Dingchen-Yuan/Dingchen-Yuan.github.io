@@ -40,7 +40,7 @@ export function Home() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.08 }}
-          className="font-display mt-3 max-w-3xl text-4xl leading-[1.1] font-semibold tracking-tight text-brand sm:text-5xl md:text-6xl"
+          className="font-display mt-3 max-w-4xl text-3xl leading-[1.15] font-semibold tracking-wide text-brand sm:text-4xl md:text-5xl"
         >
           {PROFILE.name}
         </motion.h1>

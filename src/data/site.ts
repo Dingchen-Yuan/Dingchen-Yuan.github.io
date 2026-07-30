@@ -1,5 +1,5 @@
 export const PROFILE = {
-  name: 'Dingchen Yuan',
+  name: 'DINGCHEN (BARRY) YUAN',
   preferred: 'Barry',
   title: 'Full-Stack Developer',
   location: 'Auckland, New Zealand',
@@ -12,8 +12,8 @@ export const PROFILE = {
   tagline:
     'Full-stack developer focused on ASP.NET, React/TypeScript, and shipping reliable cloud-backed products.',
   about: [
-    'I’m Dingchen (Barry) Yuan, a full-stack developer completing a Master of Information Technology at the University of Auckland. I build end-to-end web systems — from ASP.NET / Node APIs and relational data models to polished React and Svelte interfaces.',
-    'Recent work includes team products such as FocusForge (React + NestJS + MongoDB) and UOA Village (SvelteKit + Express + SQLite), plus ongoing portfolio projects around JWT auth, xAI Grok, Azure, and AWS. I’m especially interested in clean API design, cloud deployment, and AI-assisted engineering workflows.',
+    'I am DINGCHEN (BARRY) YUAN, a full-stack developer completing a Master of Information Technology at the University of Auckland. I build end-to-end web systems — from ASP.NET / Node APIs and relational data models to polished React and Svelte interfaces.',
+    'Recent work includes team products such as FocusForge (React + NestJS + MongoDB) and UOA Village (SvelteKit + Express + SQLite), plus ongoing portfolio projects around JWT auth, xAI Grok, Azure, and AWS. I am especially interested in clean API design, cloud deployment, and AI-assisted engineering workflows.',
   ],
 }
 
