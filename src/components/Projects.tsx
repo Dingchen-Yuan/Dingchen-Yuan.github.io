@@ -23,14 +23,26 @@ export function Projects() {
                   </h3>
                   <p className="mt-1 text-sm font-medium text-muted">{project.role}</p>
                 </div>
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-brand transition hover:bg-chip"
-                >
-                  GitHub <ExternalLink className="size-3.5" />
-                </a>
+                <div className="flex flex-wrap gap-2">
+                  {'liveHref' in project && project.liveHref ? (
+                    <a
+                      href={project.liveHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-brand/30 bg-brand px-3 py-1.5 text-xs font-semibold text-white transition hover:opacity-90"
+                    >
+                      Live demo <ExternalLink className="size-3.5" />
+                    </a>
+                  ) : null}
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-brand transition hover:bg-chip"
+                  >
+                    GitHub <ExternalLink className="size-3.5" />
+                  </a>
+                </div>
               </div>
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
                 {project.description}

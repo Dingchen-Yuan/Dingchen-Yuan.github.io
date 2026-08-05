@@ -13,7 +13,7 @@ export const PROFILE = {
     'Full-stack developer focused on ASP.NET, React/TypeScript, and shipping reliable cloud-backed products.',
   about: [
     'I am DINGCHEN (BARRY) YUAN, a full-stack developer completing a Master of Information Technology at the University of Auckland. I build end-to-end web systems — from ASP.NET / Node APIs and relational data models to polished React and Svelte interfaces.',
-    'Recent work includes team products such as FocusForge (React + NestJS + MongoDB) and UOA Village (SvelteKit + Express + SQLite), plus ongoing portfolio projects around JWT auth, xAI Grok, Azure, and AWS. I am especially interested in clean API design, cloud deployment, and AI-assisted engineering workflows.',
+    'Recent work includes team products such as FocusForge (React + NestJS + MongoDB) and UOA Village (SvelteKit + Express + SQLite), plus a live Azure career-coaching app with Google JWT auth, PostgreSQL, Redis, and optional xAI Grok. I am especially interested in clean API design, cloud deployment, and AI-assisted engineering workflows.',
   ],
 }
 
@@ -27,6 +27,28 @@ export const NAV = [
 ] as const
 
 export const PROJECTS = [
+  {
+    name: 'Grok Career Coach',
+    role: 'Personal · Live on Azure',
+    description:
+      'Live ASP.NET Core + React career-coaching app: Google Identity sign-in with JWT access/refresh tokens, PostgreSQL session history, Redis analyze caching, optional xAI Grok, Docker, and Azure Container Apps + Key Vault. Users paste a job description and résumé highlights to get structured coaching output.',
+    stack: [
+      'ASP.NET Core',
+      'React',
+      'TypeScript',
+      'Google JWT',
+      'PostgreSQL',
+      'Redis',
+      'Grok',
+      'Docker',
+      'Azure Container Apps',
+      'Key Vault',
+    ],
+    href: 'https://github.com/Dingchen-Yuan/grok-career-coach',
+    liveHref:
+      'https://ca-grok-web.thankfuldune-4d704de3.newzealandnorth.azurecontainerapps.io',
+    status: 'Personal · Deployed',
+  },
   {
     name: 'UOA Village',
     role: 'Team project · PGCIT · Witty Wolves',
@@ -44,15 +66,6 @@ export const PROJECTS = [
     stack: ['React', 'TypeScript', 'Vite', 'NestJS', 'MongoDB', 'JWT/OAuth', 'Docker', 'AWS'],
     href: 'https://github.com/Dingchen-Yuan/focusforge-omniport',
     status: 'Course · Team · Completed',
-  },
-  {
-    name: 'Grok Career Coach',
-    role: 'Personal · In progress',
-    description:
-      'Planned ASP.NET Core career-coaching API with JWT, PostgreSQL, Redis, Docker, and xAI Grok, targeting Azure App Service + Key Vault. Repository scaffolded; implementation underway.',
-    stack: ['ASP.NET Core', 'C#', 'JWT', 'PostgreSQL', 'Redis', 'Docker', 'Grok', 'Azure'],
-    href: 'https://github.com/Dingchen-Yuan/grok-career-coach',
-    status: 'Personal · In progress',
   },
   {
     name: 'AWS Portfolio Ops',
@@ -76,11 +89,30 @@ export const STACK = [
   },
   {
     group: 'Backend',
-    items: ['ASP.NET Core', 'NestJS', 'Node.js / Express', 'REST APIs', 'JWT / OAuth', 'Entity Framework'],
+    items: [
+      'ASP.NET Core',
+      'NestJS',
+      'Node.js / Express',
+      'REST APIs',
+      'JWT / OAuth',
+      'Entity Framework',
+    ],
   },
   {
     group: 'Data & Cloud',
-    items: ['SQL Server', 'PostgreSQL', 'MongoDB', 'SQLite', 'Redis', 'Azure', 'AWS', 'Docker'],
+    items: [
+      'SQL Server',
+      'PostgreSQL',
+      'MongoDB',
+      'SQLite',
+      'Redis',
+      'Docker',
+      'Azure',
+      'Azure Container Apps',
+      'Key Vault',
+      'AWS',
+      'GitHub Actions (CI)',
+    ],
   },
 ]
 
@@ -88,9 +120,9 @@ export const RESUME = {
   summary:
     'MIT (UoA) full-stack developer with team delivery experience across ASP.NET/C#, React/TypeScript, NestJS, and cloud-backed apps. Open to internships and junior full-stack / backend roles in New Zealand.',
   highlights: [
+    'Shipped a live Azure career-coaching app (ASP.NET Core + React) with Google JWT auth, PostgreSQL, Redis, optional xAI Grok, Docker, Container Apps, and Key Vault.',
     'Shipped UOA Village (SvelteKit + Express + Java Swing admin) and FocusForge (React + NestJS + MongoDB + OAuth) in university team projects.',
-    'Comfortable designing REST APIs, relational models, and auth flows (JWT / OAuth); experienced with Docker-based local and cloud deploy paths.',
-    'Building follow-on portfolio work: Grok + Azure career API, and AWS portfolio ops (S3, Terraform, CI/CD).',
+    'Comfortable designing REST APIs, relational models, and auth flows (JWT / OAuth); experienced with Docker-based local and cloud deploy paths and GitHub Actions CI.',
   ],
   pdfHref: '/resume.pdf',
   linkedin: 'https://www.linkedin.com/in/dingchen-yuan/',
