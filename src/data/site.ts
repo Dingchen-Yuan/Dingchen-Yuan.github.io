@@ -28,21 +28,35 @@ export const NAV = [
 
 export const PROJECTS = [
   {
+    name: 'FocusForge',
+    role: 'Team project · CS732 · OmniPort',
+    description:
+      'Contributed to a full-stack cognitive training app in an Agile team using React, NestJS, MongoDB, Docker, and AWS EC2. Redesigned login/landing interfaces and mobile auth navigation, added game feedback sounds, and configured Vite LAN hosting for on-device testing.',
+    stack: ['React', 'TypeScript', 'NestJS', 'MongoDB', 'Docker', 'AWS EC2', 'Vercel'],
+    href: 'https://github.com/Dingchen-Yuan/focusforge-omniport',
+    status: 'Course · Team · Completed',
+  },
+  {
+    name: 'UOA Village',
+    role: 'Team project · PGCIT · Witty Wolves',
+    description:
+      'Team-built university community platform. Developed the Java Swing admin client (user management, statistics, dashboard) and implemented web login, registration, navigation, profile, friend/chat flows, password recovery, and a responsive UoA-inspired theme.',
+    stack: ['SvelteKit', 'Express', 'SQLite', 'Java Swing'],
+    href: 'https://github.com/Dingchen-Yuan/uoa-village-witty-wolves',
+    status: 'Course · Team · Completed',
+  },
+  {
     name: 'Grok Career Coach',
     role: 'Personal · Live on Azure',
     description:
-      'Live ASP.NET Core + React career-coaching app: Google Identity sign-in with JWT access/refresh tokens, PostgreSQL session history, Redis analyze caching, optional xAI Grok, Docker, and Azure Container Apps + Key Vault. Users paste a job description and résumé highlights to get structured coaching output.',
+      'Built and deployed a live AI career-coaching app (ASP.NET Core + React) with Google Identity, JWT access/refresh tokens, PostgreSQL session history, and Redis caching. Optional xAI Grok coaching; containerised with Docker and deployed to Azure Container Apps with Key Vault and GitHub Actions CI.',
     stack: [
       'ASP.NET Core',
       'React',
-      'TypeScript',
-      'Google JWT',
       'PostgreSQL',
       'Redis',
-      'Grok',
       'Docker',
-      'Azure Container Apps',
-      'Key Vault',
+      'Azure',
     ],
     href: 'https://github.com/Dingchen-Yuan/grok-career-coach',
     liveHref:
@@ -50,31 +64,21 @@ export const PROJECTS = [
     status: 'Personal · Deployed',
   },
   {
-    name: 'UOA Village',
-    role: 'Team project · PGCIT · Witty Wolves',
-    description:
-      'Blogging/social platform with articles, comments, friends, chat, and password recovery. Built the Java Swing admin client plus core web UX (login/register/nav/profile) and UoA-inspired theming.',
-    stack: ['SvelteKit', 'Express', 'SQLite', 'Java Swing', 'Vite'],
-    href: 'https://github.com/Dingchen-Yuan/uoa-village-witty-wolves',
-    status: 'Course · Team · Completed',
-  },
-  {
-    name: 'FocusForge',
-    role: 'Team project · CS732 · OmniPort',
-    description:
-      'Full-stack focus & memory training app with Google OAuth/JWT, MongoDB, Docker, AWS EC2, and Vercel. Contributed login/landing redesign, mobile auth nav polish, game SFX, and Vite LAN device preview.',
-    stack: ['React', 'TypeScript', 'Vite', 'NestJS', 'MongoDB', 'JWT/OAuth', 'Docker', 'AWS'],
-    href: 'https://github.com/Dingchen-Yuan/focusforge-omniport',
-    status: 'Course · Team · Completed',
-  },
-  {
     name: 'AWS Portfolio Ops',
-    role: 'Personal · In progress',
+    role: 'Personal · Live on AWS',
     description:
-      'Planned NestJS portfolio ops API with JWT-protected admin uploads, PostgreSQL, S3/CloudFront, Docker, GitHub Actions, and Terraform on AWS. Repository scaffolded; implementation underway.',
-    stack: ['NestJS', 'JWT', 'PostgreSQL', 'S3', 'CloudFront', 'Docker', 'Terraform', 'AWS'],
+      'Built a NestJS portfolio API with Prisma/PostgreSQL, JWT admin authentication, and protected project CRUD. Implemented S3 presigned uploads and a React frontend with published project list and detail pages. Provisioned S3, CloudFront, and GitHub OIDC with Terraform; deployed the frontend to CloudFront.',
+    stack: [
+      'React',
+      'NestJS',
+      'PostgreSQL',
+      'AWS S3/CloudFront',
+      'Terraform',
+      'GitHub Actions',
+    ],
     href: 'https://github.com/Dingchen-Yuan/aws-portfolio-ops',
-    status: 'Personal · In progress',
+    liveHref: 'https://d2su3weadcioxs.cloudfront.net',
+    status: 'Personal · Deployed',
   },
 ]
 
@@ -120,9 +124,9 @@ export const RESUME = {
   summary:
     'MIT (UoA) full-stack developer with team delivery experience across ASP.NET/C#, React/TypeScript, NestJS, and cloud-backed apps. Open to internships and junior full-stack / backend roles in New Zealand.',
   highlights: [
+    'Built FocusForge (React + NestJS + MongoDB) and UOA Village (SvelteKit + Express + Java Swing admin) in university Agile team projects.',
     'Shipped a live Azure career-coaching app (ASP.NET Core + React) with Google JWT auth, PostgreSQL, Redis, optional xAI Grok, Docker, Container Apps, and Key Vault.',
-    'Shipped UOA Village (SvelteKit + Express + Java Swing admin) and FocusForge (React + NestJS + MongoDB + OAuth) in university team projects.',
-    'Comfortable designing REST APIs, relational models, and auth flows (JWT / OAuth); experienced with Docker-based local and cloud deploy paths and GitHub Actions CI.',
+    'Built AWS Portfolio Ops: NestJS + PostgreSQL API with JWT admin CRUD, S3 uploads, React frontend, and Terraform-provisioned CloudFront deploy.',
   ],
   pdfHref: '/resume.pdf',
   linkedin: 'https://www.linkedin.com/in/dingchen-yuan/',
